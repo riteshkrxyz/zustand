@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CourseForm from "./components/CourseForm";
+import useCourseStore from "./store/courseStore";
+import { useNameStore } from "./store/nameStore.ts";
 
 function App() {
+  // const { courses, removeCourse, toggleCourseStatus } = useCourseStore();
+  const { firstname, lastname, updateFirstName, updateLastName } = useNameStore();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <p>FirstName : {firstname} , LastName : {lastname}</p>
+        <div>
+          <label htmlFor="">FirstName</label>
+          <input type="text" name="" id="" onChange={(e) => updateFirstName(e.target.value)} />
+        </div>
+        <div>
+          <label htmlFor="">Lastname</label>
+          <input type="text" name="" id="" onChange={(e) => updateLastName(e.target.value)} />
+        </div>
+      </div>
+    </>
+
   );
 }
 

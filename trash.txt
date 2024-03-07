@@ -1,0 +1,30 @@
+{/* <div>
+        <h1>My count is {count}</h1>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={() => setCount(count + 1)}>increment count by set function</button>
+      </div>
+      <TestCounter /> */}
+  const { count, increment, decrement, setCount } = useCounterStore();
+
+
+{/* <CourseForm />
+      <ul>
+        {
+          courses.map((course, id) => {
+            return (
+              <React.Fragment>
+                <li style={{ backgroundColor: course.completed ? 'green' : 'white' }}>
+                  <span>
+                    <input type="checkbox" checked={course.completed} onChange={(e) => toggleCourseStatus(course.id)} />
+                  </span>
+                  <span>
+                    {course?.title}
+                  </span>
+                  <button onClick={() => removeCourse(course.id)}>Delete</button>
+                </li>
+              </React.Fragment>
+            )
+          })
+        }
+      </ul> */}
